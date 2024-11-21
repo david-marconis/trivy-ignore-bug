@@ -1,0 +1,2 @@
+# This affects all current node images, it is a regex dos and this app doesn't use regex
+CVE-2024-21538
