@@ -14,7 +14,7 @@ jobs:
           TRIVY_IGNORE_UNFIXED: true
           TRIVY_SEVERITY: CRITICAL,HIGH
           TRIVY_QUIET: false
-          TRIVY_FORMAT: table
+          TRIVY_FORMAT: sarif
           TRIVY_OUTPUT: trivy-results-image.sarif
           TRIVY_DB_REPOSITORY: public.ecr.aws/aquasecurity/trivy-db:2
           INPUT_SCAN_TYPE: image
