@@ -9,14 +9,6 @@ jobs:
       - uses: aquasecurity/trivy-action@0.29.0
         with:
           image-ref: node:23.2.0-alpine3.20
-        env:
-          TRIVY_EXIT_CODE: 1
-          TRIVY_IGNORE_UNFIXED: true
-          TRIVY_SEVERITY: CRITICAL,HIGH
-          TRIVY_QUIET: false
-          TRIVY_FORMAT: sarif
-          TRIVY_OUTPUT: trivy-results-image.sarif
-          TRIVY_DB_REPOSITORY: public.ecr.aws/aquasecurity/trivy-db:2
-          INPUT_SCAN_TYPE: image
-          INPUT_IMAGE_REF: node:23.2.0-alpine3.20
-          INPUT_SCAN_REF: .
+          severity: CRITICAL,HIGH
+          exit-code: 1
+          format: sarif
