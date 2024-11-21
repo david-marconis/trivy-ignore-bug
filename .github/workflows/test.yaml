@@ -13,7 +13,7 @@ jobs:
           TRIVY_EXIT_CODE: 1
           TRIVY_IGNORE_UNFIXED: true
           TRIVY_SEVERITY: CRITICAL,HIGH
-          TRIVY_QUIET: true
+          TRIVY_QUIET: false
           TRIVY_FORMAT: sarif
           TRIVY_OUTPUT: trivy-results-image.sarif
           TRIVY_DB_REPOSITORY: public.ecr.aws/aquasecurity/trivy-db:2
