@@ -7,6 +7,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: aquasecurity/trivy-action@0.29.0
+        with:
+          image-ref: node:23.2.0-alpine3.20
         env:
           TRIVY_EXIT_CODE: 1
           TRIVY_IGNORE_UNFIXED: true
