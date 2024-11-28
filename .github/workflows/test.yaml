@@ -5,13 +5,13 @@ jobs:
   test:
     runs-on: ubuntu-22.04
     steps:
-      - uses: aquasecurity/trivy-action@0.29.0
+      - uses: david-marconis/trivy-action@9bd8b9689e7ae07ab1e8752e555ddf32cdfb28d0
         with:
           image-ref: node:23.2.0-alpine3.20
           severity: CRITICAL,HIGH
           exit-code: 0
           format: sarif
-      - uses: aquasecurity/trivy-action@0.29.0
+      - uses: david-marconis/trivy-action@9bd8b9689e7ae07ab1e8752e555ddf32cdfb28d0
         with:
           image-ref: node:23.2.0-alpine3.20
           severity: CRITICAL,HIGH
