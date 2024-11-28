@@ -5,11 +5,15 @@ jobs:
   test:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: aquasecurity/trivy-action@0.29.0
+        with:
+          image-ref: node:23.2.0-alpine3.20
+          severity: CRITICAL,HIGH
+          exit-code: 0
+          format: sarif
       - uses: aquasecurity/trivy-action@0.29.0
         with:
           image-ref: node:23.2.0-alpine3.20
           severity: CRITICAL,HIGH
           exit-code: 1
-          format: sarif
-          limit-severities-for-sarif: true
+          format: table
